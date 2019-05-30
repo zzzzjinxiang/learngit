@@ -8,6 +8,6 @@ public class stackTake{
 		int j = 13;
 		}
 		lock.unlock();
-		return i+j*i;
+		return i*j+j*i;
 	}
 }
