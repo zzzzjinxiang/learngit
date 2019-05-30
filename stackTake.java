@@ -4,11 +4,13 @@ public class stackTake{
 	private condition con;
 	public int cal(){
 		lock.lock();
-		synchronized(this){
-		int i = 12;
-		int j = 13;
-		}
-		lock.unlock();
+		while(true){
+			synchronized(this){
+			int i = 12;
+			int j = 13;
+			}
+			lock.unlock();
+	}
 		return i+j*i;
 	}
 }
