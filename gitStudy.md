@@ -39,3 +39,9 @@ git branch // 查看分支
 git merge dev // 合并仓库
 
 解决冲突
+git merge --no-ff -m "merge with no-ff" dev // "--no-ff"表示禁用fast forward
+
+Bug分支
+git stash // 保存当前工作,创建新的工作区
+git stash pop // 返回之前工作区，并删除stash
+git stash apply@{0} + git stash drop // 恢复工作区 + 删除stash
