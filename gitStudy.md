@@ -56,3 +56,5 @@ feature分支
 仓库信息
 git remote -v
 git push origin dev // 推送分支
+若合并冲突
+git pull试图合并，否则解决冲突再提交
