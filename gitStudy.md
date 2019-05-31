@@ -34,14 +34,25 @@ git clone git@github.com:name/.git
 git checkout -b dev命令加上-b参数表示创建并切换，相当于以下两条命令：
 git branch dev // 创建
 git checkout dev // 切换
-git branch -d dev // 删除分支
+
+git branch -d dev // 删除分支(-D强制删除)
 git branch // 查看分支
+git checkout -b dev origin/dev // 创建origin的dev分支
 git merge dev // 合并仓库
 
 解决冲突
 git merge --no-ff -m "merge with no-ff" dev // "--no-ff"表示禁用fast forward
+把最新的提交从origin/dev抓下来，然后，在本地合并，解决冲突，再推送
+git branch --set-upstream-to=origin/dev dev
+git pull
 
 Bug分支
 git stash // 保存当前工作,创建新的工作区
 git stash pop // 返回之前工作区，并删除stash
 git stash apply@{0} + git stash drop // 恢复工作区 + 删除stash
+
+feature分支
+
+仓库信息
+git remote -v
+git push origin dev // 推送分支
